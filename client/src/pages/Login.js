@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import axios from "axios"
 import { useDispatch } from 'react-redux'
 import { authAction } from '../redux/store'
+import "../designing/login_page.css"
 
 const Login = () => {
   const [inputs, setInputs] = useState({
@@ -42,7 +43,7 @@ const Login = () => {
 
   return (
     <>
-      <form onSubmit={HandleSubmit}>
+      {/* <form onSubmit={HandleSubmit}>
         <Box
           maxWidth={450}
           display={'flex'}
@@ -61,7 +62,23 @@ const Login = () => {
           <Button type='submit' color='primary' variant='contained' sx={{ borderRadius: 3, marginTop: 3 }}>Submit</Button>
           <Button onClick={() => navigate('/register')} color='primary' variant='contained' sx={{ borderRadius: 3, marginTop: 3 }}>Don't have a account? Please register</Button>
         </Box>
-      </form>
+      </form> */}
+
+      <div className='login_background_image'>
+        <div className='login_form_data'>
+          <div className='login_heading'>
+            <h1 className='login_heading'>
+              Login
+            </h1>
+          </div>
+          <form>
+            <input type='email' placeholder='Email' />
+            <input type='password' placeholder='Password' />
+            <button className='login_submit_button'>Login</button>
+          </form>
+        </div>
+      </div>
+
     </>
   )
 }
