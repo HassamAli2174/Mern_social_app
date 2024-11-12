@@ -11,6 +11,11 @@ const Login = () => {
     email: "",
     password: "",
   })
+
+  const goToRegister = () => {
+    navigate('/register');
+  };
+
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const handlechange = (e) => {
@@ -22,7 +27,7 @@ const Login = () => {
 
   const HandleSubmit = async (e) => {
     e.preventDefault()
-    // console.log(inputs)
+    console.log(inputs)
     try {
       const { data } = await axios.post('/api/v1/user/login',
         {
@@ -76,6 +81,7 @@ const Login = () => {
             <input type='password' className='login_input' placeholder='Password' />
             <button className='login_submit_button'>Login</button>
           </form>
+          <h5 className='line'>Don’t have an account ? <button className='transparent-button' onClick={goToRegister}>SIGN UP</button> instead</h5>
         </div>
       </div>
 

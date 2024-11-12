@@ -11,6 +11,10 @@ const Register = () => {
     email: "",
     password: "",
   })
+
+  const goToLogin = () => {
+    navigate('/login');
+  };
   const navigate = useNavigate()
   const handlechange = (e) => {
     setInputs(prevInputs => ({
@@ -66,9 +70,15 @@ const Register = () => {
       <div className='signup_page'>
         <div className='slogan_div'>
           <h1 className='h1'>LETS</h1>
-          <h5 className='h5'>CONNECT</h5>
+          <h4 className='h4'>Connect</h4>
         </div>
         <div className='signup_background_image'>
+        <div className='signup_form_data'>  
+        <div className='signup_heading'>
+            <h1 className='signup_heading'>
+            Create Account
+            </h1>
+          </div>
         <form className='signup_form'>
             <input className='signup_input' type='text' placeholder='Name' />
             <input className='signup_input' type='email' placeholder='Email' />
@@ -76,6 +86,8 @@ const Register = () => {
             <input className='signup_input' type='password' placeholder='Confirm password' />
             <button className='signup_submit_button'>Sign Up</button>
           </form>
+          <h5 className='line'>Already have an account ? <button className='transparent-button' onClick={goToLogin}>LOGIN</button> instead</h5>
+          </div>
         </div>
       </div>
 
