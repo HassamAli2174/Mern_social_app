@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Box, Typography, TextField, Button } from "@mui/material"
 import { useNavigate } from 'react-router-dom'
 import axios from "axios"
+import "../designing/register_page.css"
 
 const Register = () => {
   const [inputs, setInputs] = useState({
@@ -40,7 +41,7 @@ const Register = () => {
 
   return (
     <>
-      <form onSubmit={HandleSubmit}>
+      {/* <form onSubmit={HandleSubmit}>
         <Box
           maxWidth={450}
           display={'flex'}
@@ -60,7 +61,25 @@ const Register = () => {
           <Button type='submit' color='primary' variant='contained' sx={{ borderRadius: 3, marginTop: 3 }}>Submit</Button>
           <Button onClick={() => navigate('/login')} color='primary' variant='contained' sx={{ borderRadius: 3, marginTop: 3 }}>Already have a account? Please login</Button>
         </Box>
-      </form>
+      </form> */}
+
+      <div className='signup_page'>
+        <div className='slogan_div'>
+          <h1 className='h1'>LETS</h1>
+          <h5 className='h5'>CONNECT</h5>
+        </div>
+        <div className='signup_background_image'>
+        <form className='signup_form'>
+            <input className='signup_input' type='text' placeholder='Name' />
+            <input className='signup_input' type='email' placeholder='Email' />
+            <input className='signup_input' type='password' placeholder='Password' />
+            <input className='signup_input' type='password' placeholder='Confirm password' />
+            <button className='signup_submit_button'>Sign Up</button>
+          </form>
+        </div>
+      </div>
+
+
     </>
   )
 }
