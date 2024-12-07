@@ -1,0 +1,238 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+.bg_color{
+    background-color: #011329;
+}
+
+
+/* Home background Image : 
+1. set bg-img
+2. set background color temporarily
+*/
+
+.home_background_image{
+    background-image: url('../assets/images/social_app_background_image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /* background-color: #011329; */
+    
+    
+}
+
+
+
+/* Side bar : 
+1. set width
+2. set position
+3. set margin
+4. set border-radius
+5. set padding for children
+*/
+
+
+
+/* ========== Left sidebar ========== */
+
+.left_side_bar{
+    background-color: rgba(50, 71, 94, 0.4);
+    
+    /* width: 20%; */
+    /* border-radius: 24px;
+    padding: 16px 16px 16px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+    height: 100%; */
+}
+
+
+.upper_sidebar{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+
+/* name and image of user:
+1. set display to flex
+2. set font color 
+*/
+
+.appname_and_appimg{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    color: White;
+}
+
+/* image of user: 
+1. set border-radius so it can be small circular image
+*/
+.appname_and_appimg img{
+    border-radius: 50%;
+}
+
+/* name of user: 
+1. set font size and weight
+*/
+.appname_and_appimg h2{
+    font-size: 32px;
+    font-weight: 500;
+}
+
+/* other pages links : 
+1. set basic font size and weight
+2. set color
+3. set display to flex
+*/
+.other_pages_links{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.other_pages_links h4{
+    font-size: 22px;
+    color: white;
+    font-weight: 400;
+}
+
+
+/* lower siderbar : 
+set basic css
+*/
+.lower_siderbar{
+    display: inline-flex;
+    gap: 4px;
+}
+
+.lower_siderbar h4{
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* ========== Left sidebar end ========== */
+
+/* ========== Right sidebar ========== */
+
+.right_side_bar{
+    background-color: rgba(50, 71, 94, 0.4);
+    /* width: 20%; */
+    /* border-radius: 24px;
+    padding: 16px 20px 16px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 32px;
+    height: 100%; */
+    
+}
+
+/* Weather stats : 
+1. set it to flex to cover entire width
+*/
+.Weather_stats{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Weather heading : 
+1. set basic font css
+*/
+.Weather_stats h2{
+    font-size: 32px;
+    font-weight: 500;
+    color: white;
+}
+
+.weather_city{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* weather city: 
+1. set basic font css for the city 
+*/
+.weather_city h4{
+    font-size: 24px;
+    color: white;
+    font-weight: 300;
+}
+
+/* topcics */
+.topic_heading h2{
+    font-size: 32px;
+    font-weight: 500;
+    color: white;
+}
+
+.trending_topics{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+    padding-top: 8px;
+}
+
+/* trending topics: 
+1. set font size and weight
+2. set color and background color
+3. set padding withrespect to every topics
+4. set border radius
+5. set a width for minimal design
+*/
+.trending_topics h4 {
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    background-color: #011329;
+    padding: 8px 20px 8px 20px;
+    border-radius: 16px; 
+    width: 80%;  
+}
+
+/* Chat */
+.chat_heading h2{
+    font-size: 32px;
+    font-weight: 500;
+    color: white;
+}
+
+.users{
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.users img{
+    border-radius: 50%;
+}
+
+.users p{
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+}
+
+/* ========== Right sidebar end ========== */
+
+/* ========== Main Content ========== */
+
+.main_content{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(50, 71, 94, 0.4);
+    /* background-color: rgba(50, 71, 94, 0.4); */
+}
+
+
