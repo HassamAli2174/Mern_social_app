@@ -26,9 +26,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #011329;  /* White text color */
+    color: #fff;  /* White text color */
     font-size: 48px; /* Larger font size */
     font-weight: bold; /* Bold text */
+    font-family: 'Poppins', sans-serif;
 }
 
 .slogan_div h1, .slogan_div h4 {
@@ -43,10 +44,12 @@ body {
 */
 .signup_background_image {
     width: 100%;
-    background-image: url('../assets/images/social_app_background_image.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    /* background-image: url('../assets/images/social_app_background_image.jpg'); */
+    background-color: #fff;
+    opacity: .89;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-position: center; */
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
     display: flex;

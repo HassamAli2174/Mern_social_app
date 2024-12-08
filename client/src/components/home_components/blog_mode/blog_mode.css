@@ -4,3 +4,50 @@
     width: 100%;
     background-color: rgba(50, 71, 94, 0.4);
 }
+
+@keyframes swipeRight {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(500px); 
+      opacity: 0;
+    }
+  }
+  
+  @keyframes swipeLeft {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-500px); 
+      opacity: 0;
+    }
+  }
+  
+  .icon-animate-right {
+    animation: swipeRight 0.5s ease-out forwards;
+  }
+  
+  .icon-animate-left {
+    animation: swipeLeft 0.5s ease-out forwards;
+  }
+  
+/* @keyframes swipeRightIcon {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(500px);
+      opacity: 0.5; 
+    }
+  }
+  
+  .icon-animate {
+    animation: swipeRightIcon 0.5s ease-out forwards;
+  }
+  
+   */

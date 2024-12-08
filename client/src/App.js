@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import EditCreatePost from './pages/EditCreatePost';
 import './App.css';
+import AccountPage from './pages/Accounts';
 
 function App() {
     return (
@@ -22,12 +23,18 @@ function App() {
                         </li>
                     </ul>
                 </nav> */}
+            <div className="app-background">
                 <Routes>
-                    <Route path="/create" element={<EditCreatePost />} />
-                    <Route path="/" element={<Home />} />
-                    <Route path='/login' element={<Login />} />
                     <Route path="/register" element={<Register />} />
+                    <Route path='/login' element={<Login />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/profile" element={<AccountPage />} />
+                    <Route path="/create-blog" element={<EditCreatePost />} />
+                    <Route path="/my-blogs" />
+                    <Route path="/settings" />
                 </Routes>
+            </div>
+
             {/* </div> */}
         </>
     );

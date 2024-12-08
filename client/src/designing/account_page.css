@@ -1,0 +1,118 @@
+.container-fluid {
+    padding: 0;  /* Removes padding around the container */
+    margin: 0;   /* Removes margin around the container */
+    height: 90vh; /* Limits the maximum height of the container */
+    display: flex; /* Ensures flex layout to align children */
+    overflow: hidden; /* Prevents any overflow from the container */
+    
+}
+.left_side_bar, .account-info {
+    height: 100%; /* Ensures both components take full height of their parent */
+    flex-basis: 250px; /* Adjusts basis for sidebar if needed, otherwise remove */
+    padding: 20px; /* Provides padding within the components */
+    overflow-y: auto; /* Adds scrolling to each component individually if needed */
+}
+.account-page {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    min-height: 90vh;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    align-items: center;
+    justify-content: center; /* Centering content */
+}
+
+.profile-image img {
+    width: 120px; /* Set the size of the image */
+    height: 120px; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Ensure the image covers the space properly */
+    display: block; /* Block display */
+    margin: 0 auto 20px; /* Center horizontally and add margin below */
+    border: 3px solid #fff; /* Optional: add a white border around the image */
+}
+.account-info {
+    flex-grow: 1; /* Takes up the rest of the space */
+    padding: 2rem; /* More space around the content */
+    margin-left: 20px; /* Space between sidebar and main content */
+    background-color: rgba(50, 71, 94, 0.4);; ; /* Background color for main content */
+    border-radius: 10px; /* Rounded corners */
+}
+/* Adjustments to ensure content does not touch the edges */
+.row {
+    width: 100%;  /* Ensures the row takes full width of its container */
+    height: 90%; /* Matches the height to the container */
+    margin: 0;    /* Removes default margin */
+    display: flex; /* Ensures flex layout to align children horizontally */
+}
+
+.bg-color{
+    margin-top: 4%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-color: #011329;
+    border-radius: 2%;
+    padding: 20px 10px 20px 10px;
+}
+
+.account-info h2 {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Space between form groups */
+}
+
+.form-group label {
+    color: #C9D1D9; /* Light gray for labels */
+}
+
+.form-control {
+    background-color: #0D1117;
+    border: 1px solid #30363D;
+    color: #C9D1D9;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    border-color: #58A6FF; /* Highlight color when focused */
+}
+
+.update-button, .cancel-button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px; /* Space between form and buttons */
+    background-color: #0056b3; /* Stylish blue for buttons */
+    border: none;
+    color: white;
+}
+
+.update-button:hover, .cancel-button:hover {
+    background-color: #004494; /* Darker blue on hover */
+}
+
+.form_input{
+    /* border-radius: 24px; */
+    padding: 10px 6px 10px 6px;
+    outline: none;
+    border: none;
+    margin: 8px;
+    /* width: 25px; */
+    opacity: 0.5;
+    font-size: 25px;
+    
+}
+
+.form_input::placeholder{
+    padding-left: 1px;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 600;
+    color: black;
+}
+
+/* .input-container {
+    max-width: 90%;
+} */

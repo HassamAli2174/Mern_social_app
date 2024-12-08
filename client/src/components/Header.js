@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { AppBar, Box, Toolbar, Typography, Button, Tabs, Tab } from "@mui/material"
 import { Link, useNavigate } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { authAction } from '../redux/store'
+import { authActions } from '../redux/authSlice'
 const Header = () => {
     // global state
     const isLogin = useSelector((state) => state.isLogin)
@@ -13,7 +13,7 @@ const Header = () => {
     //logout
     const handleLogout = () => {
         try {
-            dispatch(authAction.logut())
+            dispatch(authActions.logut())
             alert("Logout Successfully!")
             navigate('/login')
         } catch (error) {

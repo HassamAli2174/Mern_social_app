@@ -14,6 +14,14 @@ body, html {
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
+.app-background {
+  background-image: url('../src/assets/images/seconday_backend_image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh; 
+}
+
 nav {
   background-color: #333;
   padding: 10px 0;

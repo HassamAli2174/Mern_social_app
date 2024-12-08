@@ -1,238 +1,228 @@
-
 body {
     font-family: 'Poppins', sans-serif;
     padding: 0;
     margin: 0;
 }
 
-
-.bg_color{
-    background-color: #011329;
-}
-
-
-/* Home background Image : 
-1. set bg-img
-2. set background color temporarily
-*/
-
-.home_background_image{
+/* Home background image */
+/* .home_background_image {
     background-image: url('../assets/images/social_app_background_image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    /* background-color: #011329; */
-    
-    
-}
+} */
 
-
-
-/* Side bar : 
-1. set width
-2. set position
-3. set margin
-4. set border-radius
-5. set padding for children
-*/
-
-
-
-/* ========== Left sidebar ========== */
-
-.left_side_bar{
+/* ========== Left Sidebar ========== */
+.left_side_bar {
     background-color: rgba(50, 71, 94, 0.4);
-    
-    /* width: 20%; */
-    /* border-radius: 24px;
-    padding: 16px 16px 16px 16px;
+    font-family: 'Poppins', sans-serif;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 32px;
-    height: 100%; */
-}
-
-
-.upper_sidebar{
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
+    border-radius: 24px;
 }
 
+.sidebar-icon {
+    margin-right: 8px; /* Adjust the spacing as needed */
+}
 
-/* name and image of user:
-1. set display to flex
-2. set font color 
-*/
-
-.appname_and_appimg{
+.appname_and_appimg {
     display: flex;
-    flex-direction: row;
     gap: 24px;
-    color: White;
+    color: white;
 }
 
-/* image of user: 
-1. set border-radius so it can be small circular image
-*/
-.appname_and_appimg img{
+.appname_and_appimg img {
     border-radius: 50%;
 }
 
-/* name of user: 
-1. set font size and weight
-*/
-.appname_and_appimg h2{
+.appname_and_appimg h2 {
     font-size: 32px;
     font-weight: 500;
 }
 
-/* other pages links : 
-1. set basic font size and weight
-2. set color
-3. set display to flex
-*/
-.other_pages_links{
+.other_pages_links {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-.other_pages_links h4{
+.other_pages_links h4 {
     font-size: 22px;
     color: white;
     font-weight: 400;
 }
 
 
-/* lower siderbar : 
-set basic css
-*/
-.lower_siderbar{
+
+/* Invisible Buttons in Left Sidebar */
+.invisible-btn {
+    background-color: #011329 !important;
+    color: white !important;
+    border: 2px solid transparent !important;
+    padding: 10px 20px;
+    text-decoration: none;
+    /* font-size: 100px; */
+    text-align: left;
+    /* font-weight: 400; */
+    /* border-radius: 30px; */
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Updated to transition all properties smoothly */
+    font-family: 'Poppins', sans-serif;
+    position: relative; /* Needed for the pseudo-elements */
+    overflow: hidden; /* Ensures pseudo-elements do not spill out of button boundaries */
+}
+
+/* Add hover effect */
+.invisible-btn:hover {
+    background-color: #011329; /* Darker background on hover */
+    color: #011329; /* Change text color to yellow for visibility */
+    font-weight: 600; /* Make the font weight heavier */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px #011329; /* Adding a glowing shadow effect */
+}
+
+/* Add focus effect to improve accessibility */
+.invisible-btn:focus {
+    /* color: #011329; Darker background on hover */
+    /* color: white; */
+    /* font-weight: 600; */
+    /* font-size: 18px; */
+    color: #011329 !important;
+    font-style: italic;
+    font-weight: 600;
+    opacity: .9;
+    background-color: white !important;
+    padding: 8px 20px 8px 20px;
+    border-radius: 16px; 
+    width: 100%;  
+    box-shadow: 0 0 5px rgba(0, 146, 255, 0.6); 
+}
+
+/* Styling for a glowing effect on hover using pseudo-elements */
+.invisible-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 30px; /* Match button border radius */
+}
+
+.invisible-btn:hover::before {
+    opacity: 1; /* Fade in the radial highlight on hover */
+}
+
+.left_side_bar .invisible-btn, 
+.right_side_bar .invisible-btn {
+    text-align: left; /* Align text to the left for sidebar buttons */
+}
+
+/* Lower Sidebar (Logout button) */
+.lower_siderbar {
     display: inline-flex;
     gap: 4px;
 }
 
-.lower_siderbar h4{
+.lower_siderbar h4 {
     color: white;
     font-size: 18px;
     font-weight: 500;
 }
 
-/* ========== Left sidebar end ========== */
-
-/* ========== Right sidebar ========== */
-
-.right_side_bar{
+/* ========== Right Sidebar ========== */
+.right_side_bar {
+    font-family: 'Poppins', sans-serif;
     background-color: rgba(50, 71, 94, 0.4);
-    /* width: 20%; */
-    /* border-radius: 24px;
-    padding: 16px 20px 16px 20px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 32px;
-    height: 100%; */
-    
+    height: 100%;
+    border-radius: 24px;
 }
 
-/* Weather stats : 
-1. set it to flex to cover entire width
-*/
-.Weather_stats{
+/* Weather stats */
+.Weather_stats {
     display: flex;
     justify-content: space-between;
 }
 
-/* Weather heading : 
-1. set basic font css
-*/
-.Weather_stats h2{
+.Weather_stats h2 {
     font-size: 32px;
     font-weight: 500;
     color: white;
 }
 
-.weather_city{
+.weather_city {
     display: flex;
     justify-content: space-between;
 }
 
-/* weather city: 
-1. set basic font css for the city 
-*/
-.weather_city h4{
+.weather_city h4 {
     font-size: 24px;
     color: white;
     font-weight: 300;
 }
 
-/* topcics */
-.topic_heading h2{
+/* Topics */
+.topic_heading h2 {
     font-size: 32px;
     font-weight: 500;
     color: white;
 }
 
-.trending_topics{
+.trending_topics {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     gap: 8px;
     padding-top: 8px;
 }
 
-/* trending topics: 
-1. set font size and weight
-2. set color and background color
-3. set padding withrespect to every topics
-4. set border radius
-5. set a width for minimal design
-*/
 .trending_topics h4 {
     font-size: 18px;
     color: white;
     font-weight: 400;
     background-color: #011329;
-    padding: 8px 20px 8px 20px;
-    border-radius: 16px; 
-    width: 80%;  
+    padding: 8px 20px;
+    border-radius: 16px;
+    width: 80%;
 }
 
 /* Chat */
-.chat_heading h2{
+.chat_heading h2 {
     font-size: 32px;
     font-weight: 500;
     color: white;
 }
 
-.users{
+.users {
     display: flex;
     justify-content: flex-start;
     gap: 8px;
 }
 
-.users img{
+.users img {
     border-radius: 50%;
 }
 
-.users p{
+.users p {
     font-size: 18px;
     font-weight: 300;
     color: white;
 }
 
-/* ========== Right sidebar end ========== */
-
 /* ========== Main Content ========== */
-
-.main_content{
+.main_content {
     display: flex;
+    font-family: 'Poppins', sans-serif;
     flex-direction: column;
     background-color: rgba(50, 71, 94, 0.4);
-    /* background-color: rgba(50, 71, 94, 0.4); */
 }
-
-

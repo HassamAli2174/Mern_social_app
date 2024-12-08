@@ -7,7 +7,7 @@ body {
 2. set child div to center
 */
 .login_background_image {
-    background-image: url('../assets/images/social_app_background_image.jpg');
+    /* background-image: url('../assets/images/social_app_background_image.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     /* object-fit: cover; */

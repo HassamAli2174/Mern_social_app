@@ -45,28 +45,6 @@ const Register = () => {
 
   return (
     <>
-      {/* <form onSubmit={HandleSubmit}>
-        <Box
-          maxWidth={450}
-          display={'flex'}
-          flexDirection={'column'}
-          alignItems={'center'}
-          justifyContent={'center'}
-          margin={'auto'}
-          marginTop={5}
-          boxShadow={'0px 15px 20px #ccc'}
-          padding={3}
-          borderRadius={6}
-        >
-          <Typography variant='h3' padding={3} textAlign={'center'}>Register</Typography>
-          <TextField onChange={handlechange} value={inputs.name} placeholder='name' name='name' margin='normal' type={'name'} required />
-          <TextField onChange={handlechange} value={inputs.email} placeholder='email' name='email' margin='normal' type={'email'} required />
-          <TextField onChange={handlechange} value={inputs.password} placeholder='password' name='password' margin='normal' type={'password'} required />
-          <Button type='submit' color='primary' variant='contained' sx={{ borderRadius: 3, marginTop: 3 }}>Submit</Button>
-          <Button onClick={() => navigate('/login')} color='primary' variant='contained' sx={{ borderRadius: 3, marginTop: 3 }}>Already have a account? Please login</Button>
-        </Box>
-      </form> */}
-
       <div className='signup_page'>
         <div className='slogan_div'>
           <h1 className='h1'>LETS</h1>
