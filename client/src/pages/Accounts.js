@@ -6,13 +6,13 @@ import "../designing/account_page.css";
 function AccountPage() {
     return (
         <Container fluid className="account-page">
-            <Row className="d-flex align-items-center justify-content-center">
+            <Row className="d-flex gap-4 align-items-center justify-content-between">
                 <Sidebar />
-                <Col md={9} className="account-info">
+                <Col md={10} className="account-info">
                     <h2>Account Information</h2>
                     <div className="bg-color">
                         {/* <Form className="account-form row">  Added row for form layout */}
-                        <Form className="">  {/* Added row for form layout */}
+                        <Form className="row">  {/* Added row for form layout */}
                             <div className="profile-image">
                                 <img src="path_to_your_image.jpg" alt="Profile" />
                             </div>
