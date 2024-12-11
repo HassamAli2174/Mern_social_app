@@ -4,10 +4,12 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import EditCreatePost from './pages/EditCreatePost';
+import EditCreatePost from './pages/CreateBlog';
 import './App.css';
 import AccountPage from './pages/Accounts';
 import ProfilePage from './pages/ProfilePage';
+import CreateBlog from './pages/CreateBlog';
+import MyBlogs from './pages/MyBlogs';
 
 function App() {
     return (
@@ -31,8 +33,8 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/accounts" element={<AccountPage />} />
                     <Route path="/profile" element={<ProfilePage />} />
-                    <Route path="/create-blog" element={<EditCreatePost />} />
-                    <Route path="/my-blogs" />
+                    <Route path="/create-blog" element={<CreateBlog />} />
+                    <Route path="/my-blogs" element={<MyBlogs />}/>
                     <Route path="/settings" />
                 </Routes>
             </div>

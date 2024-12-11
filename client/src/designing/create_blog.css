@@ -1,0 +1,117 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.create_blog {
+    background-image: url('../assets/images/seconday_backend_image.jpg'); /* background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-width: 100%;
+}
+
+
+.form_container {
+    background-color: rgba(50, 71, 94, 0.4); /* reset background color */
+}
+
+
+
+.input_container {
+    border: 2px solid white;  /* set border color with respect to figma design */
+    border-radius: 16px;
+    width: 40% !important;
+}
+
+.textarea_container {
+    border: 2px solid white;  /* set border color with respect to figma design */
+    border-radius: 16px;
+    width: 40% !important;
+}
+
+.input_field {
+    border: none !important;    /* remove border  */
+    padding-left: 8px;
+    font-size: 20px;
+}
+
+.input_field::placeholder {
+    color: white !important;
+    padding-left: 8px;
+    font-size: 20px;
+}
+
+.input_field:focus {
+    border: none !important;
+
+}
+
+/* 
+
+set position, overflow for better UI to upload image
+
+*/
+.upload_image {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+input[type=file] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+
+.create-blog-button{
+    background-color: #011329 !important;
+    max-width: 30% !important;
+    border-radius: 16px !important;
+    border: none !important;
+    font-size: 20px !important;
+}
+
+
+.create-blog-button:hover{
+    background-color: #011329; /* Darker background on hover */
+    color: #011329; /* Change text color to yellow for visibility */
+    font-weight: 600; /* Make the font weight heavier */
+    transform: translateY(-2px); /* Slight lift effect */
+    /* box-shadow: 0 4px 8px #011329;  Adding a glowing shadow effect */
+}
+
+.create-blog-button:focus{
+    color: #011329 !important;
+    /* font-style: italic; */
+    font-weight: 600;
+    opacity: .9;
+    background-color: white !important;
+    padding: 8px 20px 8px 20px;
+    border-radius: 16px; 
+    width: 100%;  
+    /* box-shadow: 0 0 5px rgba(0, 146, 255, 0.6);  */
+}
+
+/* Styling for a glowing effect on hover using pseudo-elements */
+.invisible-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 80%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 30px; /* Match button border radius */
+}
+
+
+
+
+
+

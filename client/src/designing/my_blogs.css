@@ -1,0 +1,46 @@
+
+
+.my-blogs-page{
+    display: flex;
+    min-width: 100% !important;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+.my_blogs {
+    background-color: rgba(50, 71, 94, 0.4);
+    width: 80% !important;
+    
+    max-height: 95vh; /* Constrain the height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #3b5998 #1c1c1c;  /* Thumb and Track colors for Firefox */
+  }
+  
+ /* For Chrome, Edge, and Safari */
+.my_blogs::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+.my_blogs::-webkit-scrollbar-track {
+    background: #1c1c1c; /* Scrollbar track background */
+    border-radius: 10px;
+}
+
+.my_blogs::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #3b5998, #6a89cc); /* Gradient thumb */
+    border-radius: 10px;
+}
+
+.my_blogs::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #5a6ab0, #8a9edb); /* Hover effect for thumb */
+}
+
+
+.image-of-blog{
+    height: 50% !important;
+    overflow: hidden;
+}
