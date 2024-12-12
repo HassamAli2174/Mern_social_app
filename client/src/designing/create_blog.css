@@ -5,113 +5,103 @@ body {
 }
 
 .create_blog {
-    background-image: url('../assets/images/seconday_backend_image.jpg'); /* background image */
+    background-image: url('../assets/images/seconday_backend_image.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     min-width: 100%;
 }
 
-
 .form_container {
-    background-color: rgba(50, 71, 94, 0.4); /* reset background color */
-}
-
-
-
-.input_container {
-    border: 2px solid white;  /* set border color with respect to figma design */
+    background-color: rgba(50, 71, 94, 0.4);
     border-radius: 16px;
-    width: 40% !important;
+    padding: 20px;
 }
 
+/* Responsive input containers */
+.input_container,
 .textarea_container {
-    border: 2px solid white;  /* set border color with respect to figma design */
+    border: 2px solid white;
     border-radius: 16px;
-    width: 40% !important;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .input_field {
-    border: none !important;    /* remove border  */
+    border: none !important;
     padding-left: 8px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .input_field::placeholder {
     color: white !important;
-    padding-left: 8px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
-.input_field:focus {
-    border: none !important;
-
-}
-
-/* 
-
-set position, overflow for better UI to upload image
-
-*/
+/* Upload image section */
 .upload_image {
     position: relative;
     overflow: hidden;
-    display: inline-block;
 }
 
-input[type=file] {
+input[type="file"] {
     position: absolute;
     left: 0;
     top: 0;
     opacity: 0;
 }
 
-
-.create-blog-button{
+/* Button styling */
+.create-blog-button {
     background-color: #011329 !important;
-    max-width: 30% !important;
     border-radius: 16px !important;
     border: none !important;
     font-size: 20px !important;
+    color: white;
+    letter-spacing: 0.6px;
 }
 
-
-.create-blog-button:hover{
-    background-color: #011329; /* Darker background on hover */
-    color: #011329; /* Change text color to yellow for visibility */
-    font-weight: 600; /* Make the font weight heavier */
-    transform: translateY(-2px); /* Slight lift effect */
-    /* box-shadow: 0 4px 8px #011329;  Adding a glowing shadow effect */
-}
-
-.create-blog-button:focus{
-    color: #011329 !important;
-    /* font-style: italic; */
+.create-blog-button:hover {
+    background-color: #011329;
+    color: #fff;
     font-weight: 600;
-    opacity: .9;
-    background-color: white !important;
-    padding: 8px 20px 8px 20px;
-    border-radius: 16px; 
-    width: 100%;  
-    /* box-shadow: 0 0 5px rgba(0, 146, 255, 0.6);  */
+    transform: translateY(-2px);
 }
 
-/* Styling for a glowing effect on hover using pseudo-elements */
-.invisible-btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 80%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 30px; /* Match button border radius */
+/* Responsive adjustments with media queries */
+@media (max-width: 576px) {
+    .form_container {
+        padding: 10px;
+    }
+
+    .input_field {
+        font-size: 14px;
+    }
+
+    .create-blog-button {
+        max-width: 100%;
+        font-size: 16px;
+    }
 }
 
+@media (min-width: 768px) {
+    .form_container {
+        padding: 20px;
+    }
 
+    .create-blog-button {
+        max-width: 40%;
+        font-size: 20px;
+    }
+}
 
+@media (min-width: 1200px) {
+    .input_container,
+    .textarea_container {
+        width: 75%;
+    }
 
-
-
+    .create-blog-button {
+        max-width: 30%;
+    }
+}

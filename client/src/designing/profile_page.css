@@ -1,120 +1,146 @@
-.container-fluid {
-    padding: 0; /* Removes padding around the container */
-    margin: 0; /* Removes margin around the container */
-    height: 100vh; /* Full height */
-    display: flex; /* Flex layout for the container */
-    flex-direction: row; /* Side-by-side layout */
-  }
-  
+/* Global Reset */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #011329;
+  color: white;
+}
+
+.profile-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+
+
+/* Main Content Area */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+  scrollbar-width: thin;
+  /* For Firefox */
+  scrollbar-color: #3b5998 #1c1c1c;
+  /* Thumb and Track colors for Firefox */
+}
+
+ /* For Chrome, Edge, and Safari */
+ .my_blogs::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+.my_blogs::-webkit-scrollbar-track {
+  background: #1c1c1c; /* Scrollbar track background */
+  border-radius: 10px;
+}
+
+.my_blogs::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #3b5998, #6a89cc); /* Gradient thumb */
+  border-radius: 10px;
+}
+
+.my_blogs::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #5a6ab0, #8a9edb); /* Hover effect for thumb */
+}
+
+
+.profile-info-container {
+  padding: 1rem;
+  background-color: rgba(50, 71, 94, 0.6);
+  border-radius: 8px;
+  margin: 1rem;
+}
+
+.profile-image-section {
+  max-width: 30% !important;
+}
+
+.user-name {
+  font-size: 112px;
+}
+
+
+.divider {
+  border-top: 1px solid white;
+  margin: 1rem 0;
+}
+
+/* Image Grid */
+/* Ensure proper spacing between images */
+.image-grid {
+  padding: 20px; /* Add padding around the grid */
+}
+
+.image-grid .image-item {
+  display: flex; /* Flex ensures consistent alignment */
+  justify-content: center; /* Centers images horizontally */
+  gap: 10px; /* Space between grid items */
+}
+
+.image-grid-img {
+  width: 100%; /* Ensure full width of column */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover content proportionally */
+  border-radius: 10px; /* Rounded corners for images */
+}
+
+
+/* Media Queries */
+@media (max-width: 576px) {
+
+  /* Small phones */
   .profile-page {
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    color: white;
+    flex-direction: column;
   }
-  
 
-  
   .main-content {
-    margin-left: 300px; /* Space to the right of the fixed sidebar */
-    width: calc(100% - 250px); /* Remaining space for the content */
-    /* padding: 2rem; */
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow-y: auto; /* Allows scrolling if content overflows */
-  }
-  
-  .profile-info-container {
-    max-height: 100vh;
-    overflow-y: auto; /* Single vertical scroll */
-  }
-  
-  .profile-info {
-    padding: 2rem;
-    background-color: rgba(50, 71, 94, 0.4);
-    border-radius: 10px;
-    margin-bottom: 2rem;
-  }
-  
-  .image-grid {
-    padding: 2rem;
-    background-color: rgba(50, 71, 94, 0.4);
-    border-radius: 10px;
-  }
-  
-  .bg-color-p {
-    background-color: #011329;
-    border-radius: 2%;
-    padding: 20px 10px 20px 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  }
-  
-  .profile-row {
-    display: flex;
-    align-items: center;
-    padding: 50px;
-    /* margin-bottom: 20px; */
-  }
-  
-  .profile-image-col {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .profile-image img {
-    width: 200px;
-    height: 200px;
-    border-radius: 15%;
-    object-fit: cover;
-    display: block;
-    margin-bottom: 20px;
-    border: 3px solid #fff;
-  }
-  
-  .profile-details-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .profile-details p {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  
-  .edit-button {
     width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    background-color: #0056b3;
-    border: none;
-    color: white;
-    font-size: 16px;
-    text-align: center;
+    padding: 0;
   }
-  
-  .edit-button:hover {
-    background-color: #004494;
-  }
-  
-  .image-grid .image-item {
-    padding: 10px;
-  }
-  
-  .image-grid-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-  
+}
 
-  .divider {
-    border-top: 1px solid #fff; /* White line for the divider */
-    margin: 1rem 0; /* Space above and below the hr */
+@media (min-width: 576px) and (max-width: 768px) {
+
+  /* Tablets */
+  .image-grid .image-item {
+    flex: 0 0 50%;
+    /* 2 columns */
   }
-  
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+
+  /* Laptops */
+  .image-grid .image-item {
+    flex: 0 0 33.33%;
+    /* 3 columns */
+  }
+}
+
+@media (min-width: 1200px) {
+
+  /* Large screens */
+  .image-grid .image-item {
+    flex: 0 0 20%;
+    /* 5 columns for large desktops */
+  }
+
+  .main-content {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1600px) {
+
+  /* Huge screens */
+  .image-grid .image-item {
+    flex: 0 0 16.66%;
+    /* 6 columns for huge screens */
+  }
+}
